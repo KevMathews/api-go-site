@@ -1,0 +1,139 @@
+body, html {
+    font-size: 23px;
+}
+
+div.main-body {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-gap: 4em;
+    grid-template-areas: "navbar mainContent";
+  }
+  
+  nav#navbar {
+    grid-area: navbar;
+    position: fixed;
+ }
+  .exampleTable1 {
+    border: 8px solid black;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: red;
+  width: 55vw;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+}
+  
+  nav#navbar a {
+    display: block;
+    border: 1.5px solid black;
+    padding: 5px;
+    /* margin: 10px 0; */
+    text-decoration: none;
+    color: black;
+  }
+  
+  main#main-doc {
+    grid-area: mainContent;
+  }
+
+  header {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+.nav-link {
+    /* border-radius: 3px; */
+}  
+.nav-link:hover {
+    background-color: lightgray;
+}
+.images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+hr {
+    width: 40vw;
+}
+.introduction-body {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+li {
+    font-size: 1.2em;
+}
+@media screen and (max-width: 750px) {
+    div.main-body {
+      grid-template-columns: 1fr;
+      grid-template-areas: "navbar" "mainContent";
+    }
+      nav#navbar {
+      position: inherit;
+    }
+  }
+  .welcomeContainerDiv, .queryExamplesDiv, .missionManifestDiv, .apiGoLogoDivMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .exampleFetchContainerDiv  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .exampleFetchDiv {
+    padding: 20px 40px;
+    width: 20vw;
+    text-align: center;
+  }
+  .missionManifestDiv, .PhotoAttributesDiv, .queryExamplesDiv {
+    border: 3px solid black;
+    width: 55vw;
+    padding: 20px 80px;
+    margin: 20px auto;
+    
+  }
+  .missionManifestDiv, .PhotoAttributesDiv, .queryExamplesDiv {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+  }
+  .nasaLists {
+    margin-left: -20%;
+  }
+  .nasaParagraphDiv{
+    padding: 20px 40px;
+  }
+  .exampleHr {
+    width: 55vw;
+  }
+  .exampleContainerDiv, .exampleLists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .exampleTopDiv{
+    border: 3px solid black;
+    width: 55vw;
+    padding: 20px 80px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+  }
+  .showJson {
+    max-width: 50vw;
+    white-space: pre-line;
+  }
