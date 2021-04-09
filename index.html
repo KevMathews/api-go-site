@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <title>API-go Jump start your project! </title>
 </head>
@@ -313,150 +314,315 @@
                     voluptatibus
                     dolorum?
                 </p>
+
             </section>
+
             <br />
-            <div class="main-section" id='Examples'>
-                <hr>
-                <header>
-                    Examples
-                </header>
-                <hr>
+            <section class="main-section" id='APIs'>
+                <div class="main-section" id='Examples'>
+                    <hr>
 
-                <h1>News API</h1>
-                <p>News API allows you to search through over 75,000 news sources and blogs dating back the last 3
-                    years.<br />
-                    They have 2 main endpoints to query(<i><b>everything</b></i> and <i>top-headlines</i>) with many
-                    parameters for each<br />
+                    <header>
+                        Examples
+                    </header>
+                    <hr>
+                    <h4>
+                        In the below example you will see a sampling of the data tables and examples you will find.
+                        <br />
+                        The tables are easy to view so you can quickly find what parameters are available for use.
+                        <br />
+                        Example queries are shown as well, with samples of what the JSON you get back will look like.
+                    </h4>
+
+                    <h1>News API</h1>
+
+                    <p>News API allows you to search through over 75,000 news sources and blogs dating back the last 3
+                        years.<br />
+                        They have 2 main endpoints to query(<i><b>everything</b></i> and <i>top-headlines</i>) with many
+                        parameters for each<br />
+                        <br />
+
+                    </p>
+
                     <br />
 
-                </p>
+                </div>
+                <div class=' main-section exampleContainerDiv'>
+                    <h2>Everything Endpoint</h2>
+                    <h3>Everything searches are ideal for news analysis and article discovery</h3>
+                    <div class='exampleTopDiv'>
 
-                <br />
-                <br />
-            </div>
-            <div className='exampleContainerDiv'>
-                <h2>Everything Endpoint</h2>
-                <h4>Everything searches are ideal for news analysis and article discovery</h4>
-                <div className='exampleTopDiv'>
+                        <h2>Query Parameters:</h2>
+                        <hr class='exampleHr' />
+                        <br />
+                        <table class='exampleTable1'>
+                            <tr>
+                                <td>
+                                    <b>PARAMETERS</b>
+                                </td>
+                                <td>
+                                    <b>DESCRIPTION</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>apiKey</b>
+                                </td>
+                                <td>
+                                    Your API key. Alternatively you can provide this via the X-Api-Key HTTP header.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>q</b>
+                                </td>
+                                <td>
+                                    Keywords or phrases to search for in the article title and body.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>sources</b>
+                                </td>
+                                <td>
+                                    A comma-seperated string of identifiers (maximum 20) for the news sources or blogs
+                                    you want headlines from.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>domains</b>
 
-                    <h2>Query Parameters:</h2>
-                    <hr className='exampleHr' />
-                    <br />
-                    <table className='exampleTable1'>
-                        <tr className='exampleTdDescriptions'>
-                            <td className='exampleTdDescriptions'>
-                                <b>PARAMETERS</b>
-                            </td>
-                            <td className='exampleTdDescriptions'>
-                                <b>DESCRIPTION</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>apiKey</b>
-                            </td>
-                            <td>
-                                Your API key. Alternatively you can provide this via the X-Api-Key HTTP header.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>q</b>
-                            </td>
-                            <td>
-                                Keywords or phrases to search for in the article title and body.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>sources</b>
-                            </td>
-                            <td>
-                                A comma-seperated string of identifiers (maximum 20) for the news sources or blogs
-                                you want headlines from.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>domains</b>
+                                </td>
+                                <td>
+                                    A comma-seperated string of domains (mashable.com, techcrunch.com, engadget.com) to
+                                    restrict the search to.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>from</b>
 
-                            </td>
-                            <td>
-                                A comma-seperated string of domains (mashable.com, techcrunch.com, engadget.com) to
-                                restrict the search to.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>from</b>
-
-                            </td>
-                            <td>
-                                A date and optional time for the oldest article allowed. This should be in ISO 8601
-                                format (e.g. 2021-04-03 or 2021-04-03T15:46:09)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>to</b>
-                            </td>
-                            <td>
-                                A date and optional time for the newest article allowed. This should be in ISO 8601
-                                format (e.g. 2021-04-03 or 2021-04-03T15:46:09)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>language</b>
+                                </td>
+                                <td>
+                                    A date and optional time for the oldest article allowed. This should be in ISO 8601
+                                    format (e.g. 2021-04-03 or 2021-04-03T15:46:09)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>to</b>
+                                </td>
+                                <td>
+                                    A date and optional time for the newest article allowed. This should be in ISO 8601
+                                    format (e.g. 2021-04-03 or 2021-04-03T15:46:09)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>language</b>
 
 
-                            </td>
-                            <td>
-                                The 2-letter ISO-639-1 code of the language you want to get headlines for. Possible
-                                options:
-                                <b>ar&nbsp;de&nbsp;en&nbsp;es&nbsp;fr&nbsp;he&nbsp;it&nbsp;nl&nbsp;no&nbsp;pt&nbsp;ru&nbsp;se&nbsp;ud&nbsp;zh</b>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>
+                                    The 2-letter ISO-639-1 code of the language you want to get headlines for. Possible
+                                    options:
+                                    <b>ar&nbsp;de&nbsp;en&nbsp;es&nbsp;fr&nbsp;he&nbsp;it&nbsp;nl&nbsp;no&nbsp;pt&nbsp;ru&nbsp;se&nbsp;ud&nbsp;zh</b>
+                                </td>
+                            </tr>
 
-                    </table>
-                    <br />
-                    <br />
-                    <h2>Everything Endpoint Examples:</h2>
-                    <hr className='exampleHr' />
-                    <h4><i>https://newsapi.org/v2/everything?q=wandavision&apiKey=NEWS-API-KEY</i></h4>
-                    <p>Searches all sources for articles on <i>Wandavision</i> and will return an object that looks
-                        like this:</p>
-                    <pre className='showJson'>
+                        </table>
+                        <br />
+                        <br />
+                        <h2>Everything Endpoint Examples:</h2>
+                        <hr className='exampleHr' />
+                        <h4><i>https://newsapi.org/v2/everything?q=wandavision&apiKey=NEWS-API-KEY</i></h4>
+                        <p>Searches all sources for articles on <i>Wandavision</i> and will return an object that looks
+                            like this:</p>
+                        <pre className='showJson'>
                 {JSON.stringify(everythingJson, null, 2)}
                 </pre>
-                    <br />
-                    <hr className='exampleHr' />
-                    <br />
-                    <h4><i>https://newsapi.org/v2/everything?q=tesla&from=2021-04-01&to=2021-04-01&sortBy=popularity&apiKey=NEWS-API-KEY</i>
-                    </h4>
-                    <p>Searches all sources for articles on <i>Tesla</i> from <i>2021-04-01</i> and sorted by
-                        <i>populatity</i>and returns 571 sources. Example object returned below:
-                    </p>
-                    <pre className='showJson'>
+                        <br />
+                        <hr className='exampleHr' />
+                        <br />
+                        <h4><i>https://newsapi.org/v2/everything?q=tesla&from=2021-04-01&to=2021-04-01&sortBy=popularity&apiKey=NEWS-API-KEY</i>
+                        </h4>
+                        <p>Searches all sources for articles on <i>Tesla</i> from <i>2021-04-01</i> and sorted by
+                            <i>populatity</i>and returns 571 sources. Example object returned below:
+                        </p>
+                        <pre className='showJson'>
                 {JSON.stringify(everythingJson2, null, 2)}
                 </pre>
-                    <br />
-                    <hr className='exampleHr' />
-                    <br />
-                    <h4><i>https://newsapi.org/v2/everything?domains=engadget.com,mashable.com&apiKey=NEWS-API-KEY</i>
-                    </h4>
-                    <p>Searches all sources for articles by <i>Engadget</i> and <i>Mashable</i>. Example object
-                        returned below:</p>
-                    <pre className='showJson'>
+                        <br />
+                        <hr className='exampleHr' />
+                        <br />
+                        <h4><i>https://newsapi.org/v2/everything?domains=engadget.com,mashable.com&apiKey=NEWS-API-KEY</i>
+                        </h4>
+                        <p>Searches all sources for articles by <i>Engadget</i> and <i>Mashable</i>. Example object
+                            returned below:</p>
+                        <pre className='showJson'>
                 {JSON.stringify(everythingJson3, null, 2)}
                 </pre>
-                    <br />
-                    <hr className='exampleHr' />
-                    <br />
-                    <br />
-                    <br />
+                        <br />
+                        <hr className='exampleHr' />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                        aperiam,
+                        nihil
+                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                        debitis
+                        pariatur?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                        praesentium quam
+                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                        voluptatibus
+                        dolorum?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                        obcaecati
+                        unde
+                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                        Reprehenderit
+                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Omnis ea
+                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                        exercitationem
+                        commodi reprehenderit, a officiis. Modi, obcaecati.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                        aperiam,
+                        nihil
+                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                        debitis
+                        pariatur?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                        praesentium quam
+                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                        voluptatibus
+                        dolorum?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                        obcaecati
+                        unde
+                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                        Reprehenderit
+                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Omnis ea
+                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                        exercitationem
+                        commodi reprehenderit, a officiis. Modi, obcaecati.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                        aperiam,
+                        nihil
+                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                        debitis
+                        pariatur?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                        praesentium quam
+                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                        voluptatibus
+                        dolorum?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                        obcaecati
+                        unde
+                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                        Reprehenderit
+                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Omnis ea
+                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                        exercitationem
+                        commodi reprehenderit, a officiis. Modi, obcaecati.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                        aperiam,
+                        nihil
+                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                        debitis
+                        pariatur?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                        praesentium quam
+                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                        voluptatibus
+                        dolorum?
+                    </p>
+            </section>
+            <br />
+            <section class="main-section" id='Fetch'>
+                <hr>
+                <header>
+                    Fetch
+                </header>
+                <hr>
+                <p>
+                    Fetch calls can be tricky to set up for junior devs, we try to demystify the process, and make
+                    the
+                    development process easier for you.
+
+                </p>
+                <p>The example below is a React Hooks Fetch to the Nasa Photo of the Day API. Overall a very simple
+                    fetch, as it's pretty
+                    straightforward, and has just 1 endpoint.
+                </p>
+                <div class='images-container'>
+                    <div class='images'>
+                        <img src='/img/fetch1.jpg' />
+                    </div>
+                </div>
+                We create photoData as a variable and setPhotoData as the function to update the variable's value.
+                React's useState hook is used to set the initial state of photoData to and empty object. The async
+                function fetchPhoto helps avoid asyncronous issues that can occur when completing fetch requests. We
+                use
+                setPhotoData to update the photoData variable with the API's response.
+
+                <div class='images-container'>
+
+                    <div class='images'>
+                        <img src='/img/fetch2.jpg' />
+                    </div>
                 </div>
 
+            </section>
+            <br />
+            <section class="main-section" id='Whatstocome'>
+                <hr>
+                <header>
+                    What's To Come
+                </header>
+                <hr>
+                <br />
+                The next round of addiotions and updates are already well underway...
+                <br />
+                <h3> More APIs, more APIs, and even more APIs!</h3>
+                <br />
+                <h3>Possibly even more exciting will be the implementation on an in broweser code editor
+                    <br />
+                    This in brower live editor will allow you to better interact with out fetch examples,
+                    <br />
+                    be able
+
+                </h3>
+                Imminent addiotionswill be the Yahoo Finance API, SkyScanner, and Pokemon. Down the road the next
+                bulk update will include a Weather Api, Starwars, Marvel, and many many more.<br />
+
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
                     aperiam,
@@ -551,272 +717,122 @@
                     voluptatibus
                     dolorum?
                 </p>
-                </section>
+            </section>
+            <br />
+            <section class="main-section" id='AboutUs'>
+                <hr>
+                <header>
+                    About Us
+                </header>
+                <hr>
                 <br />
-                <section class="main-section" id='Fetch'>
-                    <hr>
-                    <header>
-                        Fetch
-                    </header>
-                    <hr>
-                    <p>
-                        Fetch calls can be tricky to set up for junior devs, we try to demystify the process, and make
-                        the
-                        development process easier for you.
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, esse magnam doloremque quod
+                    libero
+                    ipsa
+                    autem.
+                    Doloribus labore dolor ratione ad facere quam. Debitis repudiandae non in deleniti, odio odit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa animi nobis saepe
+                    consequatur
+                    impedit
+                    molestiae cupiditate aut, sint deleniti delectus nostrum qui beatae in? Earum id quo praesentium
+                    illum.
+                </p>
 
-                    </p>
-                    <p>The example below is a React Hooks Fetch to the Nasa Photo of the Day API. Overall a very simple
-                        fetch, as it's pretty
-                        straightforward, and has just 1 endpoint.
-                    </p>
-                    <div class='images-container'>
-                        <div class='images'>
-                            <img src='/img/fetch1.jpg' />
-                        </div>
-                    </div>
-                    We create photoData as a variable and setPhotoData as the function to update the variable's value.
-                    React's useState hook is used to set the initial state of photoData to and empty object. The async
-                    function fetchPhoto helps avoid asyncronous issues that can occur when completing fetch requests. We
-                    use
-                    setPhotoData to update the photoData variable with the API's response.
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                    aperiam,
+                    nihil
+                    qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                    debitis
+                    pariatur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                    praesentium quam
+                    harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                    voluptatibus
+                    dolorum?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                    obcaecati
+                    unde
+                    distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                    Reprehenderit
+                    dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Omnis ea
+                    vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                    exercitationem
+                    commodi reprehenderit, a officiis. Modi, obcaecati.
+                </p>
 
-                    <div class='images-container'>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                    aperiam,
+                    nihil
+                    qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                    debitis
+                    pariatur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                    praesentium quam
+                    harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                    voluptatibus
+                    dolorum?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                    obcaecati
+                    unde
+                    distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                    Reprehenderit
+                    dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Omnis ea
+                    vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                    exercitationem
+                    commodi reprehenderit, a officiis. Modi, obcaecati.
+                </p>
 
-                        <div class='images'>
-                            <img src='/img/fetch2.jpg' />
-                        </div>
-                    </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                    aperiam,
+                    nihil
+                    qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                    debitis
+                    pariatur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                    praesentium quam
+                    harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                    voluptatibus
+                    dolorum?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
+                    obcaecati
+                    unde
+                    distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
+                    Reprehenderit
+                    dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Omnis ea
+                    vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
+                    exercitationem
+                    commodi reprehenderit, a officiis. Modi, obcaecati.
+                </p>
 
-                </section>
-                <br />
-                <section class="main-section" id='Whatstocome'>
-                    <hr>
-                    <header>
-                        What's To Come
-                    </header>
-                    <hr>
-                    <br />
-                    The next round of addiotions and updates are already well underway...
-                    <br />
-                    <h3> More APIs, more APIs, and even more APIs!</h3>
-                    <br />
-                    Imminent addiotionswill be the Yahoo Finance API, SkyScanner, and Pokemon. Down the road the next
-                    bulk update will include a Weather Api, Starwars, Marvel, and many many more.<br />
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                </section>
-                <br />
-                <section class="main-section" id='AboutUs'>
-                    <hr>
-                    <header>
-                        About Us
-                    </header>
-                    <hr>
-                    <br />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, esse magnam doloremque quod
-                        libero
-                        ipsa
-                        autem.
-                        Doloribus labore dolor ratione ad facere quam. Debitis repudiandae non in deleniti, odio odit?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa animi nobis saepe
-                        consequatur
-                        impedit
-                        molestiae cupiditate aut, sint deleniti delectus nostrum qui beatae in? Earum id quo praesentium
-                        illum.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, a repellendus! Impedit
-                        obcaecati
-                        unde
-                        distinctio molestias voluptatem? Sint, modi doloremque quam hic perferendis suscipit vel.
-                        Reprehenderit
-                        dignissimos minus perspiciatis voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        Omnis ea
-                        vero soluta repudiandae eius! Officiis nobis aperiam corporis at, illum fugit? Est dolores
-                        exercitationem
-                        commodi reprehenderit, a officiis. Modi, obcaecati.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
-                        aperiam,
-                        nihil
-                        qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
-                        debitis
-                        pariatur?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
-                        praesentium quam
-                        harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
-                        voluptatibus
-                        dolorum?
-                    </p>
-                </section>
-                </section>
-        </main>
-    </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ad, eaque, est harum quis
+                    aperiam,
+                    nihil
+                    qui temporibus illo soluta modi dignissimos error perspiciatis. Est quae consectetur impedit
+                    debitis
+                    pariatur?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, magnam. Quod molestias earum
+                    praesentium quam
+                    harum aliquid esse, maxime debitis reprehenderit veritatis numquam rem modi ipsam nemo tempore
+                    voluptatibus
+                    dolorum?
+                </p>
 
 
 </body>

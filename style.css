@@ -1,7 +1,9 @@
 body, html {
     font-size: 23px;
 }
-
+h1, h2, h3, h4 {
+  text-align: center;
+}
 div.main-body {
     display: grid;
     grid-template-columns: minmax(300px, auto) 1fr;
@@ -12,7 +14,8 @@ div.main-body {
   nav#navbar {
     grid-area: navbar;
     position: fixed;
- }
+    
+  }
   .exampleTable1 {
     border: 8px solid black;
   margin: 0 auto;
@@ -21,6 +24,12 @@ div.main-body {
   background-color: red;
   width: 55vw;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+}
+.exampleTable1 tr td{
+  border: 1.3px solid black;
+  padding: 10px;
+  background-color: white;
+  text-align: left;
 }
   
   nav#navbar a {
