@@ -54,14 +54,19 @@ div.main-body {
   padding: 10px;
   border-radius: 15px;
   background-color: red;
-  width: 25vw;
+  max-width: 22vw;
+  height: 70em;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .aboutTable {
   border: 1.3px solid black;
   padding: 10px;
   background-color: white;
   text-align: left;
+  height: 70em;
 }
   
   nav#navbar a {
@@ -198,4 +203,11 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .aboutPic {
+    border-radius: 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
+  }
+  .aboutText {
+    font-size: 1.2em;
   }
