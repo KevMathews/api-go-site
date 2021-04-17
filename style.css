@@ -54,8 +54,10 @@ div.main-body {
   padding: 10px;
   border-radius: 15px;
   background-color: red;
-  max-width: 22vw;
-  height: 70em;
+  width: auto;
+  height: auto;
+  /* max-width: 22vw; */
+  max-height: 72em;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 5px 10px;
@@ -119,15 +121,7 @@ hr {
 li {
     font-size: 1.2em;
 }
-@media screen and (max-width: 750px) {
-    div.main-body {
-      grid-template-columns: 1fr;
-      grid-template-areas: "navbar" "mainContent";
-    }
-      nav#navbar {
-      position: inherit;
-    }
-  }
+
   .welcomeContainerDiv, .queryExamplesDiv, .missionManifestDiv, .apiGoLogoDivMain {
     display: flex;
     justify-content: center;
@@ -221,4 +215,17 @@ li {
   }
   .aboutText {
     font-size: 1.2em;
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+  @media screen and (max-width: 750px) {
+    div.main-body {
+      grid-template-columns: 1fr;
+      grid-template-areas: "navbar" "mainContent";
+    }
+      nav#navbar {
+      position: inherit;
+    }
   }
